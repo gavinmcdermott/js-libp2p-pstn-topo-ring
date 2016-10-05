@@ -1,6 +1,6 @@
 {
   "name": "libp2p-pstn-topo-ring",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ring topology for connecting nodes in a js-libp2p-pstn pubsub test network instance",
   "main": "src/index.js",
   "scripts": {
