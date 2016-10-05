@@ -2,7 +2,7 @@
 
 const R = require('ramda')
 
-const { logProgress, resolveList } = require('./utils')
+const { log, resolveList } = require('./utils')
 const { TopoError } = require('./errors')
 
 const mapIndexed = R.addIndex(R.map)
@@ -27,6 +27,8 @@ module.exports = (nodes) =>  {
       })
     })
   }, nodes)
+
+  log('Initializing ring topology')
 
   // return a promise with all connected nodes
   return resolveList(linkFns).then(() => nodes)

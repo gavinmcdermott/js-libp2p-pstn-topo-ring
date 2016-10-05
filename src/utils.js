@@ -2,9 +2,12 @@
 
 const Q = require('q')
 const R = require('ramda')
+const debug = require('debug')
 const chalk = require('chalk')
-
 const readline = require('readline')
+
+const log = debug('pstn:topo:ring')
+log.err = debug('pstn:topo:ring:error')
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -29,4 +32,4 @@ const resolveList = (fns) => {
   return Q.delay(1).then(fn).then(() => resolveList(fns))
 }
 
-module.exports = { resolveList, logProgress }
+module.exports = { resolveList, log }
