@@ -32,9 +32,9 @@ createRing(nodes).then((connectedNodes) => {
 
 ## API
 
-All APIs returns a promise.
-
 #### `createRing(<nodes>)`
+
+This API returns a promise with an array of the connected nodes.
 
 ## Tests
 
