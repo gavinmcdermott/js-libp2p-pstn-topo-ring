@@ -29,12 +29,24 @@ createRing(nodes).then((connectedNodes) => {
 
 ```
 
-
 ## API
 
-#### `createRing(<nodes>)`
+The exported function takes an array of nodes, where nodes are structured as follows: 
 
-This API returns a promise with an array of the connected nodes.
+```javascript
+node = {
+  peerInfo: <peerInfo>, 
+  libp2p: <libp2p>
+}
+```
+
+And the function returns a promise containing an array of now-connected nodes:
+
+```javascript
+const create = require('libp2p-pstn-topo-partialmesh')
+const nodes = [nodeA, nodeB, ..., nodeN]
+create(nodes).then((connected) => /* do something */)
+```
 
 ## Tests
 
